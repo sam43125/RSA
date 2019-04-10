@@ -12,8 +12,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{C09650CB-D75A-4D40-9081-4A42383BEE42}</ProjectGuid>
-    <RootNamespace>RSAEncrypt</RootNamespace>
+    <ProjectGuid>{8A074061-0B95-462D-8928-0DFA92D7D825}</ProjectGuid>
+    <RootNamespace>RSADecrypt</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,7 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="rsa-encrypt.cpp" />
+    <ClCompile Include="rsa-decrypt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
