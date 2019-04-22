@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RSA Encrypt", "RSA Encrypt\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RSA Decrypt", "RSA Decrypt\RSA Decrypt.vcxproj", "{8A074061-0B95-462D-8928-0DFA92D7D825}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "onsite test", "onsite test\onsite test.vcxproj", "{E09129B2-0586-4B9D-96D4-31DD7930395E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{8A074061-0B95-462D-8928-0DFA92D7D825}.Debug|x64.Build.0 = Debug|x64
 		{8A074061-0B95-462D-8928-0DFA92D7D825}.Release|x64.ActiveCfg = Release|x64
 		{8A074061-0B95-462D-8928-0DFA92D7D825}.Release|x64.Build.0 = Release|x64
+		{E09129B2-0586-4B9D-96D4-31DD7930395E}.Debug|x64.ActiveCfg = Debug|x64
+		{E09129B2-0586-4B9D-96D4-31DD7930395E}.Debug|x64.Build.0 = Debug|x64
+		{E09129B2-0586-4B9D-96D4-31DD7930395E}.Release|x64.ActiveCfg = Release|x64
+		{E09129B2-0586-4B9D-96D4-31DD7930395E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

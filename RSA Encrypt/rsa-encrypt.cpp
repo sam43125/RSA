@@ -22,42 +22,53 @@ using CryptoPP::Integer;
 
 typedef unsigned char byte;
 
-const string rsa_enc(Integer n, Integer e, const string &message) {
+Integer rsa_enc(Integer n, Integer e, const string &message) {
 
-    RSA::PublicKey pubKey;
-    pubKey.Initialize(n, e);
+	RSA::PublicKey pubKey;
+	pubKey.Initialize(n, e);
 
-    Integer m, c;
-    m = Integer((const byte *)message.data(), message.size());
-    c = pubKey.ApplyFunction(m);
-    
+	Integer m, c;
+	m = Integer((const byte *)message.data(), message.size());
+	c = pubKey.ApplyFunction(m);
+
+	return c;
+}
+const string Integer2hex(Integer c) {
+
     ostringstream oss;
     oss << hex << c;
-    
+
     string cipher = oss.str();
     return cipher.substr(0, cipher.size() - 1);
 }
 
+
+#ifndef NO_MAIN
+
 int main(int argc, char** argv) {
 
-    cout << rsa_enc(
-        Integer("0xab9df7c82818bab3"), 
-        Integer("0x11"), 
-        "Alice") 
+    cout << Integer2hex(
+        rsa_enc(
+            Integer("0xab9df7c82818bab3"),
+            Integer("0x11"),
+            "Alice"))
         << endl;
 
-    cout << rsa_enc(
-        Integer("0xcebe9e0617c706c632e64c3405cda5d1"), 
-        Integer("0x11"), 
-        "Hello World!") 
+    cout << Integer2hex(
+        rsa_enc(
+            Integer("0xcebe9e0617c706c632e64c3405cda5d1"),
+            Integer("0x11"),
+            "Hello World!"))
         << endl;
 
-    cout << rsa_enc(
-        Integer("0xaf195de7988cfaa1dbb18c5862e3853f0e79a12bbfa7aa326a52da97caa60c39"), 
-        Integer("0x11"), 
-        "RSA is public key.") 
+    cout << Integer2hex(
+        rsa_enc(
+            Integer("0xaf195de7988cfaa1dbb18c5862e3853f0e79a12bbfa7aa326a52da97caa60c39"),
+            Integer("0x11"),
+            "RSA is public key."))
         << endl;
 
     return 0;
 }
 
+#endif
